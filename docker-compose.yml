@@ -1,0 +1,15 @@
+version: '2.2'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./uploads:/var/www/html/uploads
+      - ./screenshots:/var/www/html/screenshots
+    environment:
+      - APACHE_RUN_USER=www-data
+      - APACHE_RUN_GROUP=www-data
+      - TESSERACT_PATH=/usr/bin/tesseract
+    restart: unless-stopped

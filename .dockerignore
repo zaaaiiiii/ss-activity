@@ -1,0 +1,11 @@
+vendor/
+uploads/
+screenshots/
+.git/
+*.md
+*.log
+*.env
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/ 
